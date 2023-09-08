@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bulma Test1 Yannis</title>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+      <script src="https://kit.fontawesome.com/2f89a98c00.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+
+
+  <!--Css Styling-->
+
+<style>
+  .navbar-burger {
+      color: #000;
+    }
+
+    .navbar-burger:hover {
+      background-color: transparent;
+    }
+
+    .navbar-menu {
+      background-color: #fff;
+    }
+
+    .navbar-item {
+      color: #000;
+    }
+
+    .navbar-dropdown {
+      background-color: #fff;
+    }    
+</style>
+
+<!--/Css Styling-->
+
+
+
+
+  <!-- Navbar -->
+ 
+  <nav class="navbar is-white" role="navigation" aria-label="main navigation" >
+    
+    
+    <div class="navbar-brand">
+      <a class="navbar-item" href="#">
+        <img src="./assets/images/cruise.svg" width="112" height="28">
+        <strong>NauticaLink</strong>       
+      </a>
+   
+   <!-- Hamburger menu -->
+   <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+   </a>
+    </div>
+
+    
+   <div id="navbarMenu" class="navbar-menu">
+    <div class="navbar-end">
+      <a class="navbar-item" href="#">Home</a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="#">Services</a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="#">Procurement for Buyers</a>
+          <a class="navbar-item" href="#">Procurement for suppliers</a>
+          <a class="navbar-item" href="#">Service Providers Marketplace</a>
+          <a class="navbar-item" href="#">IHM Maintenance</a>
+        </div>
+      </div>
+
+      <a class="navbar-item" href="#">About</a>
+      <a class="navbar-item" href="#">Contact</a>
+    </div>
+  </div>
+</nav>
+
+ <!--Navbar Script -->
+ 
+ <script>
+  document.addEventListener('DOMContentLoaded', () => {
+
+// Get all "navbar-burger" elements
+const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+// Add a click event on each of them
+$navbarBurgers.forEach( el => {
+  el.addEventListener('click', () => {
+
+    // Get the target from the "data-target" attribute
+    const target = el.dataset.target;
+    const $target = document.getElementById(target);
+
+    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+    el.classList.toggle('is-active');
+    $target.classList.toggle('is-active');
+
+  });
+});
+
+});
+</script>
+
+<!--/Navbar-->
+
+
+
+  <!-- Hero Section -->
+  <section class="hero is-info is-medium">
+    <div class="hero-body" style="background-image: url('assets/images/cargo_ship_3_bg.jpg'); background-size: cover; background-repeat: no-repeat;">
+      <div class="container has-text-centered">
+        <h1 class="title">
+          Connect with Reliable Suppliers
+        </h1>
+        <h2 class="subtitle" style="color: #fff;">
+          Simplify your procurement process and streamline your supply chain.
+        </h2>
+        <a class="button is-rounded is-white" href="#">Get Started</a>
+      </div>
+    </div>
+  </section>
+  <!--/Hero Section-->
+
+
+
+   <!-- Features Section -->
+   <section class="section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="box"style="height: 270px;">
+            <h3 class="title is-4 " >Efficient Procurement</h3>
+            <p>Discover a wide range of suppliers and streamline your procurement process with our powerful platform.</p>
+            <div class="is-flex is-justify-content-center pt-6">
+              <button class="button is-medium is-info">Learn more</button>
+            </div>
+          </div>
+          <div class="box" style="height: 270px;">
+            <h3 class="title is-4 has-text-centered ">Reliable Suppliers</h3>
+            <p>Connect with trusted suppliers who can meet your shipping needs and deliver high-quality products and services.</p>
+            <div class="is-flex is-justify-content-center pt-6">
+              <button class="button is-medium is-info">Learn more</button>
+            </div>
+          </div>
+          <div class="box" style="height: 270px;">
+            <h3 class="title is-4">Collaborative Network</h3>
+            <p>Join a community of ship owners and suppliers, fostering collaboration and enhancing your business relationships.</p>
+            <div class="is-flex is-justify-content-center pt-6">
+              <button class="button is-medium is-info">Learn more</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!--/Features Section-->
+
+
+
+  <!-- Contact Section -->
+  <section class="section is-primary has-text-centered">
+    <div class="container">
+      <h2 class="title is-3">Get in Touch</h2>
+      <p class="subtitle is-5">Contact us today to learn more about our services.</p>
+      <a class="button is-info is-outlined" href="#">Contact Us</a>
+    </div>
+  </section>
+  <!--/Contact Section-->
+
+
+
+<!--CTA Section-->
+  <section class="hero">
+  
+    <div class="hero-body px-0 py-0">
+      <div class="container has-text-centered">
+      <p class="title is-overlay is-white is-size-6-mobile is-size-2-tablet is-size-1-fullhd" style="color: #fffffff1; padding: 10px 1px"> 
+        <br>At NauticaLink, we are dedicated to revolutionizing the way ship owners and suppliers connect
+         and collaborate. <br><br><br>Trust us to streamline your procurement process,
+         simplify your supply chain, and foster strong business relationships.
+      </p>
+      </div>
+      <div class="hero-image">
+        <img src="./assets/images/port_cargo.jpg" alt="hero-image">
+      </div>
+    </div>
+ <!--/CTA Section-->
+
+
+<!--Footer-->
+<section class="section" style="background-color: rgba(26, 111, 168, 0.712); margin-top: -0.4rem;"></section>
+
+
+  <footer class="footer has-background-white">
+    <div class="container">
+      <div class="columns">
+        <div class="column">
+          <h4 class="title is-4 ">About</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Mission</a></li>
+            <li><a href="#">Vision</a></li>
+          </ul>
+        </div>
+        <div class="column">
+          <h4 class="title is-4">Services</h4>
+          <ul>
+            <li><a href="#">Procurement for Buyers</a></li>
+            <li><a href="#">Procurement for suppliers</a></li>
+            <li><a href="#">Service Providers Marketplace</a></li>
+          </ul>
+        </div>
+        <div class="column">
+          <h4 class="title is-4">Contact</h4>
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!--/Footer-->
+   
+      
+</body>
+</html>
